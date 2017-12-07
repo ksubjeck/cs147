@@ -64,9 +64,6 @@
                     <navigationItem key="navigationItem" title="Inventory" id="rON-PC-hJn">
                         <barButtonItem key="leftBarButtonItem" title="My Profile" id="rRz-NN-nrD">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <segue destination="qeN-eZ-1hd" kind="show" identifier="ProfileSegue" id="ulB-58-Kpt"/>
-                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Explore" id="fhC-hm-ift">
                             <color key="tintColor" red="0.97858996679999999" green="0.99541550349999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -82,7 +79,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sn2-eY-Sey" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1705" y="112"/>
+            <point key="canvasLocation" x="2044" y="111.99400299850076"/>
         </scene>
         <!--ExploreModally-->
         <scene sceneID="41G-Bw-kfj">
@@ -220,7 +217,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Inventory" id="9T9-Ra-ZGc">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="q3s-Ea-tfE" kind="presentation" customClass="SegueFromLeft" customModule="vTag" customModuleProvider="target" id="v4e-yE-Ozs"/>
+                                <segue destination="q3s-Ea-tfE" kind="show" customClass="SegueFromLeft" customModule="vTag" customModuleProvider="target" id="v4e-yE-Ozs"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Friends" id="Adj-ii-vHL">
@@ -237,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2887" y="112"/>
+            <point key="canvasLocation" x="3224.8000000000002" y="111.99400299850076"/>
         </scene>
         <!--Sent Tags-->
         <scene sceneID="QU2-fG-U3n">
@@ -365,7 +362,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BBp-wZ-bPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3826" y="112"/>
+            <point key="canvasLocation" x="4164" y="111.99400299850076"/>
         </scene>
         <!--Add Friends Table View Controller-->
         <scene sceneID="42v-6t-MhH">
@@ -455,7 +452,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8I7-7Z-lfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4880.8000000000002" y="111.99400299850076"/>
+            <point key="canvasLocation" x="5220" y="111.99400299850076"/>
         </scene>
         <!--Friend Requests-->
         <scene sceneID="lLV-VV-X74">
@@ -864,7 +861,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oj1-9v-Ipm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="906" y="140"/>
+            <point key="canvasLocation" x="1244" y="139.880059970015"/>
         </scene>
         <!--Edit Profile-->
         <scene sceneID="3YI-N4-i4a">
@@ -913,9 +910,6 @@
                                 <rect key="frame" x="139" y="593" width="96" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save changes"/>
-                                <connections>
-                                    <segue destination="qeN-eZ-1hd" kind="show" id="U3B-xJ-fYM"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WMp-Kh-Fr6">
                                 <rect key="frame" x="209" y="162" width="150" height="150"/>
@@ -1501,7 +1495,4 @@
         <image name="cancel" width="32" height="32"/>
         <image name="defaultPhoto" width="188" height="188"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ulB-58-Kpt"/>
-    </inferredMetricsTieBreakers>
 </document>

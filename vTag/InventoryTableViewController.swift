@@ -146,6 +146,9 @@ class InventoryTableViewController: UITableViewController {
             let selectedTag = SharedData.sharedDataInstance.tags[indexPath.row]
             tagDetailViewController.tag = selectedTag
             
+        case "toProfile":
+            print("Going to profile page");
+            
         default:
             os_log("Unidentified Segue", log: OSLog.default, type: .debug)
             
