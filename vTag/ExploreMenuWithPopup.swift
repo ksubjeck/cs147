@@ -70,8 +70,13 @@ class ExploreMenuWithPopup: UIViewController, UITextFieldDelegate {
             if let presenter = navigation.viewControllers.first as? ViewController{
                 if(newTag){ // Creating a new Tag!
                     
+                    //Sets proper date info
+                    let formatter = DateFormatter();
+                    formatter.dateFormat = "MM-dd-yyy, HH:mm:ss";
+                    let yourDate = formatter.string(from: Date());
+                    
                     tagTitle.isUserInteractionEnabled = true;
-                    let tag = Tag(name: tagTitle.text!, photo: #imageLiteral(resourceName: "VTag Logo"), dateDue: "")
+                    let tag = Tag(name: tagTitle.text!, photo: #imageLiteral(resourceName: "VTag Logo"), dateDue: yourDate)
                     presenter.placeObject(tag: tag!);
                 } else { //Deleting Tag!
                     

@@ -18,14 +18,24 @@ class SharedData {
     var nodes = [SCNNode: Tag]();
     
     func loadTags(){
+        
+        //Sets proper date info
+        let formatter = DateFormatter();
+        formatter.dateFormat = "MM-dd-yyy, HH:mm:ss";
+        let myString = formatter.string(from: Date());
+        let yourDate = formatter.date(from: myString);
+        formatter.dateFormat = "MM-dd-yyyy"; // again convert your date to string
+        let myDate = formatter.string(from: yourDate!);
+
+        
         let photo1 = UIImage(named: "VTag Logo");
-        guard let tag1 = Tag(name: "Get VTag Working", photo: photo1, dateDue: "Thursday, Nov 30") else {
+        guard let tag1 = Tag(name: "Get VTag Working", photo: photo1, dateDue: myString) else {
             fatalError("Failed to instantiate tag1");
         }
-        guard let tag2 = Tag(name: "Go to Practice", photo: photo1, dateDue: "Wednesday, Nov 29") else {
+        guard let tag2 = Tag(name: "Go to Practice", photo: photo1, dateDue: myString) else {
             fatalError("Failed to instantiate tag2");
         }
-        guard let tag3 = Tag(name: "Eat Dinner", photo: photo1, dateDue: "Wednesday, Nov 29") else {
+        guard let tag3 = Tag(name: "Eat Dinner", photo: photo1, dateDue: myString) else {
             fatalError("Failed to instantiate tag2");
         }
         self.tags += [tag1, tag2, tag3];

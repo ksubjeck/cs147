@@ -93,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VTag Logo" translatesAutoresizingMaskIntoConstraints="NO" id="MZM-J1-MTC">
-                                <rect key="frame" x="113" y="73" width="149" height="139"/>
+                                <rect key="frame" x="113" y="72.5" width="149" height="139"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="139" id="N18-vu-aCT"/>
@@ -112,10 +112,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EiV-PD-Hhb">
-                                <rect key="frame" x="96" y="219.5" width="183" height="29.5"/>
+                                <rect key="frame" x="96" y="219" width="183" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaV-fG-UT2">
-                                        <rect key="frame" x="0.0" y="0.0" width="78" height="29.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="78" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="Take Photo">
                                             <color key="titleColor" red="0.98431372549999996" green="0.63921568630000003" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
@@ -123,7 +123,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLJ-Mj-lhZ">
-                                        <rect key="frame" x="98" y="0.0" width="85" height="29.5"/>
+                                        <rect key="frame" x="98" y="0.0" width="85" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="Camera Roll">
                                             <color key="titleColor" red="0.98431372549999996" green="0.63921568630000003" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
@@ -145,13 +145,13 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yZM-ym-APD">
-                                <rect key="frame" x="113" y="34" width="149" height="30.5"/>
+                                <rect key="frame" x="113" y="34" width="149" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MkX-jC-Tg6">
-                                <rect key="frame" x="16" y="32" width="86" height="32"/>
+                                <rect key="frame" x="16" y="32" width="86" height="32.5"/>
                                 <state key="normal" title="Button" image="cancel"/>
                                 <connections>
                                     <action selector="cancel:" destination="tmG-vT-2HK" eventType="touchUpInside" id="uDq-f0-ERm"/>
@@ -198,6 +198,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bottomButton" destination="Oan-0d-a3l" id="HKi-mS-NSb"/>
+                        <outlet property="dueDate" destination="Kt2-nT-JUN" id="sim-JN-0Qd"/>
                         <outlet property="tagDate" destination="Kt2-nT-JUN" id="oYB-11-D3o"/>
                         <outlet property="tagName" destination="yZM-ym-APD" id="9rC-gI-ztG"/>
                         <outlet property="tagPhoto" destination="MZM-J1-MTC" id="UlB-nw-qvZ"/>

@@ -14,6 +14,7 @@ class ExploreViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tagPhoto: UIImageView!
     @IBOutlet weak var tagDate: UIDatePicker!
     @IBOutlet weak var bottomButton: UIButton!
+    @IBOutlet weak var dueDate: UIDatePicker!
     var tag: Tag?;
     var newTag: Bool?;
     
@@ -24,6 +25,12 @@ class ExploreViewController: UIViewController, UITextFieldDelegate {
         tagName.text = tag?.name;
         if(!newTag!){
             bottomButton.setTitle("Mark As Completed", for: .normal);
+            
+            //Sets proper date info
+            let formatter = DateFormatter();
+            formatter.dateFormat = "MM-dd-yyy, HH:mm:ss";
+            let yourDate = formatter.date(from: (tag?.dateDue)!);
+            dueDate.date = yourDate!;
         }
         
         
