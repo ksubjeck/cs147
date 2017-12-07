@@ -12,6 +12,8 @@
 		662899701FD9199700111EAC /* SentTagInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628996C1FD9199600111EAC /* SentTagInfoViewController.swift */; };
 		662899711FD9199700111EAC /* SentTagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628996D1FD9199600111EAC /* SentTagTableViewCell.swift */; };
 		662899721FD9199700111EAC /* SentTagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628996E1FD9199600111EAC /* SentTagTableViewController.swift */; };
+		662899791FD9E0A900111EAC /* ProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662899771FD9E0A800111EAC /* ProfileInfo.swift */; };
+		6628997A1FD9E0A900111EAC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662899781FD9E0A800111EAC /* ProfileViewController.swift */; };
 		6643DA671FD60CB300823D61 /* ExploreMenuWithPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6643DA661FD60CB300823D61 /* ExploreMenuWithPopup.swift */; };
 		66BA1D0D1FD0D80200B506D2 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA1D0C1FD0D80200B506D2 /* SharedData.swift */; };
 		D959654E1FCE61DA004CEBE4 /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D959654D1FCE61DA004CEBE4 /* InventoryViewController.swift */; };
@@ -54,6 +56,8 @@
 		6628996C1FD9199600111EAC /* SentTagInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentTagInfoViewController.swift; sourceTree = "<group>"; };
 		6628996D1FD9199600111EAC /* SentTagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentTagTableViewCell.swift; sourceTree = "<group>"; };
 		6628996E1FD9199600111EAC /* SentTagTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentTagTableViewController.swift; sourceTree = "<group>"; };
+		662899771FD9E0A800111EAC /* ProfileInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileInfo.swift; sourceTree = "<group>"; };
+		662899781FD9E0A800111EAC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6643DA661FD60CB300823D61 /* ExploreMenuWithPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreMenuWithPopup.swift; sourceTree = "<group>"; };
 		66BA1D0C1FD0D80200B506D2 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		D959654D1FCE61DA004CEBE4 /* InventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 				F92F3ED61FD74B0200456A04 /* FriendsTableViewController.swift */,
 				F92F3ED81FD74C2700456A04 /* Friend.swift */,
 				F92F3EE01FD8934400456A04 /* Contact.swift */,
+				662899771FD9E0A800111EAC /* ProfileInfo.swift */,
+				662899781FD9E0A800111EAC /* ProfileViewController.swift */,
 			);
 			path = vTag;
 			sourceTree = "<group>";
@@ -279,6 +285,7 @@
 				F92F3EE11FD8934400456A04 /* Contact.swift in Sources */,
 				D959654E1FCE61DA004CEBE4 /* InventoryViewController.swift in Sources */,
 				F921F3A11FD4EB9E0057E15C /* SendTagInformationViewController.swift in Sources */,
+				6628997A1FD9E0A900111EAC /* ProfileViewController.swift in Sources */,
 				6628993A1FD6621E00111EAC /* AddFriendsListViewControllerCell.swift in Sources */,
 				D95965521FCE665E004CEBE4 /* ExploreViewController.swift in Sources */,
 				D959655C1FCFD00B004CEBE4 /* TagInformation.swift in Sources */,
@@ -289,6 +296,7 @@
 				F92F3ED71FD74B0200456A04 /* FriendsTableViewController.swift in Sources */,
 				D959655A1FCF5F47004CEBE4 /* Tag.swift in Sources */,
 				662899701FD9199700111EAC /* SentTagInfoViewController.swift in Sources */,
+				662899791FD9E0A900111EAC /* ProfileInfo.swift in Sources */,
 				D97C52C31FC3F09300B943F5 /* AppDelegate.swift in Sources */,
 				F92F3ED91FD74C2700456A04 /* Friend.swift in Sources */,
 				662899381FD6620100111EAC /* AddFriendsListViewController.swift in Sources */,
