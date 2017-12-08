@@ -31,6 +31,9 @@ class ExploreViewController: UIViewController, UITextFieldDelegate {
             formatter.dateFormat = "MM-dd-yyy, HH:mm:ss";
             let yourDate = formatter.date(from: (tag?.dateDue)!);
             dueDate.date = yourDate!;
+            
+            tagDate.isUserInteractionEnabled = false;
+            tagName.isUserInteractionEnabled = false;
         }
         
         
