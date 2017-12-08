@@ -91,18 +91,6 @@ class ExploreMenuWithPopup: UIViewController, UITextFieldDelegate {
     
     
     
-//    @IBAction func markCompleted(_ sender: Any) {
-//        for (index, Tag) in SharedData.sharedDataInstance.tags.enumerated() {
-//            if ("tagName" == SharedData.sharedDataInstance.tags[index].name) {
-//                SharedData.sharedDataInstance.tags.remove(at: index) //TODO FIX "tagname" to the inherited value from the explore interface as tag
-//                
-//                
-//                
-//            }
-//        }
-//        
-//        //need to inherit the tag from the Explore interface to obtain the actual tagName
-//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
