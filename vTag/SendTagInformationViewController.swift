@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SendTagInformationViewController: UIViewController {
+class SendTagInformationViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var tagTitle: UITextField!
     @IBOutlet weak var tagPhoto: UIImageView!
@@ -17,9 +17,16 @@ class SendTagInformationViewController: UIViewController {
     var recipient: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let buttonText = "Send to " + recipient
+        self.tagTitle.delegate = self;
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+        
+        let buttonText = "Send to " + recipient;
         self.tagButton.setTitle(buttonText, for: .normal)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
     
     
