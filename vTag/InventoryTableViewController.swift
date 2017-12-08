@@ -114,6 +114,9 @@ class InventoryTableViewController: UITableViewController {
         view.window!.layer.add(transition, forKey: kCATransition)
         dismiss(animated: false, completion: nil);
         dismiss(animated: true, completion: nil);
+//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+//        let exploreViewController = storyBoard.instantiateViewController(withIdentifier: "AR Controller")
+//        self.navigationController?.pushViewController(exploreViewController, animated: true)
     }
     
     
