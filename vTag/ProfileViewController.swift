@@ -1,5 +1,5 @@
 //
-//  SentTagInfoViewController.swift
+//  ProfileViewController.swift
 //  vTag
 //
 //  Created by Cole DePasquale on 12/6/17.
@@ -8,20 +8,19 @@
 
 import UIKit
 
-class SentTagInfoViewController: UIViewController {
-    @IBOutlet weak var SentTagName: UILabel!
-    @IBOutlet weak var SentTagPhoto: UIImageView!
-    @IBOutlet weak var SentTagRecipient: UILabel!
-    @IBOutlet weak var SentTagDueDate: UILabel!
+class ProfileViewController: UIViewController {
+    @IBOutlet weak var ProfileTotalFriends: UILabel!
+    @IBOutlet weak var ProfileTagsSentCount: UILabel!
     
-    var tag: Tag?
+    override func viewWillAppear(_ animated: Bool) {
+        ProfileTotalFriends.text = String(SharedData.sharedDataInstance.friends.count)
+        ProfileTagsSentCount.text = String(SharedData.sharedDataInstance.sentTags.count)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SentTagName.text = tag?.name;
-        SentTagPhoto.image = tag?.photo;
-        SentTagRecipient.text = tag?.recipient;
-        SentTagDueDate.text = tag?.dateDue;
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,10 +28,10 @@ class SentTagInfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
+    @IBAction func BackButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-
+    
     /*
     // MARK: - Navigation
 
@@ -43,9 +42,4 @@ class SentTagInfoViewController: UIViewController {
     }
     */
 
-
-    @IBAction func DoneButtonPressed(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
 }

@@ -54,7 +54,14 @@ class InventoryTableViewController: UITableViewController {
         let tag = SharedData.sharedDataInstance.tags[indexPath.row];
         
         cell.name.text = tag.name
-        cell.DateLabel.text = tag.dateDue
+        
+        //Sets proper date info
+        let formatter = DateFormatter();
+        formatter.dateFormat = "MM-dd-yyy, HH:mm:ss";
+        let yourDate = formatter.date(from: tag.dateDue);
+        formatter.dateFormat = "MM-dd-yyyy"; // again convert your date to string
+        let myDate = formatter.string(from: yourDate!);
+        cell.DateLabel.text = myDate;
         cell.PhotoImageView.image = tag.photo
 
         return cell
@@ -138,6 +145,9 @@ class InventoryTableViewController: UITableViewController {
             
             let selectedTag = SharedData.sharedDataInstance.tags[indexPath.row]
             tagDetailViewController.tag = selectedTag
+            
+        case "toProfile":
+            print("Going to profile page");
             
         default:
             os_log("Unidentified Segue", log: OSLog.default, type: .debug)

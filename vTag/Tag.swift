@@ -25,7 +25,7 @@ class Tag {
         }
         self.photo = photo;
         self.dateDue = dateDue;
-        self.dateMade = "Today" //Fix This later
+        self.dateMade = dateDue //Fix This later
         self.creator = "Me" //Fix this later
         self.recipient = "Me"
     }

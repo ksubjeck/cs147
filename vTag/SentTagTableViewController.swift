@@ -137,23 +137,31 @@ class SentTagTableViewController: UITableViewController {
             
         case "SentTagInventorySegue":
             
-            guard let tagDetailViewController = segue.destination as? TagInformation else {
+            guard let tagDetailViewController = segue.destination as? SentTagInfoViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
             
-            guard let selectedTagCell = sender as? InventoryTableViewCell else {
-                fatalError("Unexpected sender: \(sender)")
+            guard let selectedTagCell = sender as? SentTagTableViewCell else {
+                fatalError("Unexpected sender: \(String(describing: sender))")
             }
             
             guard let indexPath = tableView.indexPath(for: selectedTagCell) else {
                 fatalError("The selected cell is not being displayed by the table")
             }
             
-            let selectedTag = SharedData.sharedDataInstance.tags[indexPath.row]
+            let selectedTag = SharedData.sharedDataInstance.sentTags[indexPath.row]
             tagDetailViewController.tag = selectedTag
             
         default:
             print("Went to the wrong view controller")
         }
     }
+    
+    @IBAction func BackButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    
 }

@@ -50,6 +50,12 @@ class TagInformation: UIViewController, UITextFieldDelegate {
             }
         }
         
+        //Sets proper date info
+        let formatter = DateFormatter();
+        formatter.dateFormat = "MM-dd-yyy, HH:mm:ss";
+        let yourDate = formatter.date(from: (tag?.dateDue)!);
+        dueDate.date = yourDate!;
+        
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -100,9 +106,7 @@ class TagInformation: UIViewController, UITextFieldDelegate {
             formatter.dateFormat = "MM-dd-yyy, HH:mm:ss";
             let myString = formatter.string(from: dueDate.date);
             let yourDate = formatter.date(from: myString);
-            formatter.dateFormat = "MM-dd-yyyy"; // again convert your date to string
-            let myDate = formatter.string(from: yourDate!);
-            SharedData.sharedDataInstance.tags[index!].dateDue = myDate;
+            SharedData.sharedDataInstance.tags[index!].dateDue = myString;
         }
         
     }
