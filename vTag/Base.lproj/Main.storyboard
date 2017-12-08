@@ -208,6 +208,65 @@
             </objects>
             <point key="canvasLocation" x="2885.5999999999999" y="1793.2533733133434"/>
         </scene>
+        <!--SendTagInfoConfirm-->
+        <scene sceneID="y5g-ce-giU">
+            <objects>
+                <viewController title="SendTagInfoConfirm" id="jd0-mY-2TB" customClass="SendTagInfoConfirmViewController" customModule="vTag" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wcO-lb-56y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O67-1H-JLR">
+                                <rect key="frame" x="16" y="156" width="343" height="295"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sendConfirmation" translatesAutoresizingMaskIntoConstraints="NO" id="hmZ-XI-Mqe">
+                                        <rect key="frame" x="107" y="104" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Success!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHj-bZ-rGb">
+                                        <rect key="frame" x="8" y="8" width="327" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tag was successfully sent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJ2-cz-Ywk">
+                                        <rect key="frame" x="8" y="56" width="327" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K9K-RV-ahN">
+                                        <rect key="frame" x="117" y="257" width="108" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.21176470589999999" green="0.52941176469999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="OK">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="okButton:" destination="jd0-mY-2TB" eventType="touchUpInside" id="9zU-cp-xZ9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kq7-cc-yi0"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="fJ2-cz-Ywk" id="rp2-Yv-9hJ"/>
+                        <outlet property="successIcon" destination="hmZ-XI-Mqe" id="ww1-sG-lpc"/>
+                        <outlet property="successLabel" destination="MHj-bZ-rGb" id="dcz-Mk-mmT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U2T-Ba-jC6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4156" y="1813.9430284857572"/>
+        </scene>
         <!--AR Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
@@ -670,7 +729,7 @@
                                     <color key="titleShadowColor" red="0.21176470589999999" green="0.52941176469999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="sendTag:" destination="tmG-vT-2HK" eventType="touchUpInside" id="6wW-oQ-FaK"/>
+                                    <segue destination="jd0-mY-2TB" kind="presentation" identifier="SendTagConfirm" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="Ac5-Bv-fNq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eh-Tj-RNR">
@@ -1150,6 +1209,7 @@
         <image name="addFriends" width="32" height="32"/>
         <image name="cancel" width="32" height="32"/>
         <image name="defaultPhoto" width="188" height="188"/>
+        <image name="sendConfirmation" width="256" height="256"/>
         <image name="sent-mail.png" width="32" height="32"/>
     </resources>
 </document>

@@ -38,6 +38,7 @@
 		F92F3EDB1FD8861D00456A04 /* AddFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92F3EDA1FD8861D00456A04 /* AddFriendsTableViewCell.swift */; };
 		F92F3EDD1FD886AD00456A04 /* AddFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92F3EDC1FD886AD00456A04 /* AddFriendsTableViewController.swift */; };
 		F92F3EE11FD8934400456A04 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92F3EE01FD8934400456A04 /* Contact.swift */; };
+		F92F3EE41FDA59F200456A04 /* SendTagInfoConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92F3EE31FDA59F200456A04 /* SendTagInfoConfirmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		F92F3EDA1FD8861D00456A04 /* AddFriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsTableViewCell.swift; sourceTree = "<group>"; };
 		F92F3EDC1FD886AD00456A04 /* AddFriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsTableViewController.swift; sourceTree = "<group>"; };
 		F92F3EE01FD8934400456A04 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		F92F3EE31FDA59F200456A04 /* SendTagInfoConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTagInfoConfirmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				6643DA661FD60CB300823D61 /* ExploreMenuWithPopup.swift */,
 				D959654D1FCE61DA004CEBE4 /* InventoryViewController.swift */,
 				D97C52C81FC3F09300B943F5 /* Main.storyboard */,
+				F92F3EE31FDA59F200456A04 /* SendTagInfoConfirmViewController.swift */,
 				662899371FD6620100111EAC /* AddFriendsListViewController.swift */,
 				662899391FD6621E00111EAC /* AddFriendsListViewControllerCell.swift */,
 				F921F3A21FD4F2C60057E15C /* SentTagConfirmationViewController.swift */,
@@ -279,6 +282,7 @@
 				F92F3EDD1FD886AD00456A04 /* AddFriendsTableViewController.swift in Sources */,
 				D97C52C71FC3F09300B943F5 /* ViewController.swift in Sources */,
 				F92F3EDB1FD8861D00456A04 /* AddFriendsTableViewCell.swift in Sources */,
+				F92F3EE41FDA59F200456A04 /* SendTagInfoConfirmViewController.swift in Sources */,
 				D95965581FCF50CB004CEBE4 /* InventoryTableViewController.swift in Sources */,
 				662899711FD9199700111EAC /* SentTagTableViewCell.swift in Sources */,
 				F92F3ED21FD501D300456A04 /* FriendsTableViewCell.swift in Sources */,

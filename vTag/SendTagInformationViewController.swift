@@ -35,7 +35,7 @@ class SendTagInformationViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func sendTag(_ sender: UIButton) {
+    func sendTag() {
         let date = self.tagDate.date
         let formatter = DateFormatter();
         formatter.dateFormat = "MM-dd-yyy, HH:mm:ss";
@@ -50,20 +50,22 @@ class SendTagInformationViewController: UIViewController, UITextFieldDelegate {
         let currTag = Tag(name: tagTitle.text!, photo: UIImage(named: "VTag Logo"), dateDue: myDate, creator: "Me", recipient: recipient);
         
         SharedData.sharedDataInstance.sentTags.append(currTag!);
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
     }
     @IBAction func cancel(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        sendTag()
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
