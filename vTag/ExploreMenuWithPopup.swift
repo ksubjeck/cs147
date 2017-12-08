@@ -34,6 +34,7 @@ class ExploreMenuWithPopup: UIViewController, UITextFieldDelegate {
         } else {
             tagTitle.text = currTag?.name;
             tagTitle.isUserInteractionEnabled = false;
+            
         }
     }
 
@@ -113,13 +114,13 @@ class ExploreMenuWithPopup: UIViewController, UITextFieldDelegate {
             guard let destinationViewController = segue.destination as? ExploreViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
-            let tag = Tag(name: tagTitle.text!, photo: #imageLiteral(resourceName: "VTag Logo"), dateDue: "")
-            destinationViewController.tag = tag
-            
             if(newTag){
                 destinationViewController.newTag = true;
+                let tag = Tag(name: tagTitle.text!, photo: #imageLiteral(resourceName: "VTag Logo"), dateDue: "")
+                destinationViewController.tag = tag
             } else {
                 destinationViewController.newTag = false;
+                destinationViewController.tag = currTag;
             }
             
         default:
