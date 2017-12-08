@@ -55,16 +55,13 @@ class ExploreViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func setTag(_ sender: Any) {
         if(newTag)!{
-            let date = self.tagDate.date
+            let date = Date();
             
             let formatter = DateFormatter();
             formatter.dateFormat = "MM-dd-yyy, HH:mm:ss";
             let myString = formatter.string(from: date);
-            let yourDate = formatter.date(from: myString);
-            formatter.dateFormat = "MM-dd-yyyy"; // again convert your date to string
-            let myDate = formatter.string(from: yourDate!);
             
-            let currTag = Tag(name: tagName.text!, photo: UIImage(named: "VTag Logo"), dateDue: myDate);
+            let currTag = Tag(name: tagName.text!, photo: UIImage(named: "VTag Logo"), dateDue: myString);
             
             
             //Popping viewcontroller and setting it
